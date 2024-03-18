@@ -4,7 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            BankAccount account = new BankAccount();
+
+            Console.WriteLine("How much would you like to deposit?");
+            double depositAmmount = double.Parse(Console.ReadLine());
+            account.Deposit (depositAmmount);
+            var newBalance = account.GetBalance();
+            Console.WriteLine($"your current balance is ${newBalance}.");
         }
     }
 }
